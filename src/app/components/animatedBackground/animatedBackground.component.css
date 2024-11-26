@@ -1,0 +1,125 @@
+.container {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.leftLineContainer {
+    position: absolute;
+    width: 80vw;
+    height: 80vw;
+    top: 10vw;
+    left: -65vw;
+    transform: rotate(45deg);
+    transform-origin: center;
+    z-index: 2;
+}
+
+.line {
+    position: relative;
+    margin: .8rem;
+    background-color: var(--gray);
+    height: 2px;
+    z-index: 2;
+    width:120%;
+}
+
+.line:nth-child(2) {
+    width: calc(120% - 1.7rem);
+}
+.line:nth-child(3) {
+    width: calc(120% - 3.4rem);
+}
+.line:nth-child(4) {
+    width: calc(120% - 5.1rem);
+}
+.line:nth-child(5) {
+    width: calc(120% - 6.8rem);
+}
+
+.rightLineContainer {
+    position: absolute;
+    width: 80vw;
+    height: 80vw;
+    top: -19vw;
+    z-index: 2;
+    right: -68vw;
+    transform-origin: center;
+    border-radius: 2rem;
+}
+
+.rightSquareContainer {
+    height: 100%;
+    z-index: 3;
+    width: 100%;
+    position: absolute;
+    transform-origin: center;
+    border-radius: 2rem;
+    transform: rotate(45deg);
+    /*background-color: var(--gray);*/
+    overflow: hidden;
+}
+
+.square1 {
+    position: absolute;
+    bottom: -239%;
+    z-index: 4;
+    left: 120%;
+    width: 300%;
+    height: 300%;
+    transform-origin: center;
+    transform: rotate(45deg);
+    background-color: var(--gray);
+}
+
+.square2 {
+    border-radius: 2rem;
+    background-color: var(--background);
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+    width: 100%;
+    z-index: 5;
+    height: 200%;
+}
+
+.rightSquareContainer:nth-child(2) {
+    top: 0rem;
+    left: 1rem;
+}
+.rightSquareContainer:nth-child(3) {
+    top: 0;
+    left: 2rem;
+}
+.rightSquareContainer:nth-child(4) {
+    top: 0;
+    left: 3rem;
+}
+.rightSquareContainer:nth-child(5) {
+    top: 0;
+    left: 4rem;
+}
+
+@media (max-aspect-ratio: 1/1) {
+    .leftLineContainer {
+        width: 100vh;
+        height: 100vh;
+        top: 46vh;
+        left: -88vh;
+        transform: rotate(45deg);
+        transform-origin: center;
+        z-index: 2;
+    }
+
+    .rightLineContainer {
+        width: 100vh;
+        height: 100vh;
+        top: -11vh;
+        z-index: 2;
+        right: -89vh;
+        transform-origin: center;
+        border-radius: 2rem;
+    }
+}

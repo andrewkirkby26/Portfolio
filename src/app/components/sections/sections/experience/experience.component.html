@@ -1,0 +1,4 @@
+<div class="container">
+    <div class="section_title" #elem [ngStyle]="getOpacityAnimation(calcPercentVisible(elem))">Experience & Education</div>
+    <educationProfession *ngFor="let experience of dataService.resume.orderedExperiences; let index = index" [experience]="experience" [left]="index % 2 == 0 && navigationService.screenSize != Constants.SCREEN_SIZE_SMALL"></educationProfession>
+</div>

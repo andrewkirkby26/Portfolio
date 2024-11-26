@@ -1,0 +1,12 @@
+<div class="container" #elem [ngStyle]="getOpacityAnimation(calcPercentVisible(elem))">
+    <div class="background-card-1"></div>
+    <div class="background-card-2">
+        <div class="background">
+            <div *ngIf='dataService.resume.about?.salutations && (dataService.resume.about?.salutations!.length > 0)' class="slogan" [innerHTML]="dataService.resume.about?.salutations![0]"></div>
+            <button class="button hover" (click)="downloadResume()">
+                <mat-icon>download</mat-icon>
+                <span>Resume</span>
+            </button>
+        </div>
+    </div>
+</div>

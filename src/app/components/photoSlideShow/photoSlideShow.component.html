@@ -1,0 +1,12 @@
+<div class="entire_container" #slider id="slider">
+<!--    <div class="shadow shadow&#45;&#45;top" ></div>-->
+<!--    <div class="shadow shadow&#45;&#45;bottom"></div>-->
+    <div class='behind_container'>
+        <div *ngFor="let image of media; let index = index" class="image">
+            <img  *ngIf='isPhoto(image)' (click)="$event.stopPropagation(); selectImage(index)" [src]='image' class="hover"/>
+            <video  *ngIf='isVideo(image)' (click)="$event.stopPropagation(); selectImage(index)" [src]='image' class="hover" autoplay>
+                <source [src]="image" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</div>

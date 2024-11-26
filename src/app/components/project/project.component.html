@@ -1,0 +1,11 @@
+<div class="container" #elem [ngStyle]="getOpacityAnimation(calcPercentVisible(elem))">
+    <div class="card">
+        <h2>{{project.name}}</h2>
+        <h3 class="time">{{project.startDate ? project.startDate.display + ' - ': '' }}{{project.finishDate ? project.finishDate.display : 'Present'}}</h3>
+        <h3 class="position">{{project.position}} - {{project.location}}</h3>
+        <div class="description_container">
+            <p *ngFor="let desc of project.description;">{{desc}}</p>
+        </div>
+        <photoSlideShow *ngIf='project.media && project.media.length > 0' class='slideshowContainer' [visibleAtATime]="3" [media]="project.media"></photoSlideShow>
+    </div>
+</div>

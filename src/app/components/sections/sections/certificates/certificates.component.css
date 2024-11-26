@@ -1,0 +1,42 @@
+.sub_container {
+    float: left;
+    position: relative;
+    height: auto;
+    text-align: center;
+}
+
+project {
+    /*float: left;*/
+    position: relative;
+    height: auto;
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+}
+
+/* Large */
+@media (min-aspect-ratio: 1/1) {
+    project {
+        width: 100%;
+    }
+
+    .sub_container {
+        width: calc(100% - 2.8rem);
+        margin-left: 1.4rem;
+    }
+}
+
+/* Small */
+@media (max-aspect-ratio: 1/1) {
+    project {
+        width: 100%;
+    }
+
+    .card {
+        width: calc(100% - 8rem) !important
+    }
+
+    .sub_container {
+        width: calc(100%);
+    }
+}

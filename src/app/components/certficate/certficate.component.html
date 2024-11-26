@@ -1,0 +1,14 @@
+<div class="container" #elem *ngIf='certificate' [ngStyle]="getOpacityAnimation(calcPercentVisible(elem))">
+    <div class="card" [ngClass]="index % 2 == 0 ? 'floatLeft' : 'floatRight'">
+        <h2>{{certificate.name}}</h2>
+        <h3 class="time">{{certificate.date.display}}</h3>
+        <h3>{{certificate.location}}</h3>
+        <div class="description_container">
+            <p >{{certificate.description}}</p>
+        </div>
+    </div>
+    <div *ngIf='navigationService.screenSize != Constants.SCREEN_SIZE_SMALL' class="badge" [ngClass]="index % 2 == 0 ? 'floatLeft' : 'floatRight'" [ngSwitch]="certificate.type">
+        <mat-icon *ngSwitchCase="Certificate.TYPE_AWARD">emoji_events</mat-icon>
+        <mat-icon *ngSwitchCase="Certificate.TYPE_CERT">verified_user</mat-icon>
+    </div>
+</div>

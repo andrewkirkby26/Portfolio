@@ -1,0 +1,128 @@
+.container {
+    float: left;
+    position: relative;
+    height: auto;
+    width: 100%;
+    min-height: 13rem;
+    margin-bottom: 2rem;
+}
+
+.data {
+    height: 100%;
+    width: calc(50% - 5rem);
+    float: left;
+    position: relative;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: var(--fs-large);
+    color: var(--accent);
+    margin: 0;
+}
+
+h3 {
+    font-weight: 300;
+    color: var(--accent);
+    margin: 0;
+    margin-top: -1rem;
+    font-size: var(--fs-large);
+}
+
+.professionDescWrapper {
+    font-weight: 200;
+    color: var(--black);
+    margin: 0;
+    margin-top: -2rem;
+    font-size: var(--fs-medium);
+}
+
+.line {
+    position: absolute;
+    left:  calc(50% - .2rem);
+    top: 0rem;
+    width: 4px;
+    background-color: var(--dark-gray);
+    height: calc(100% + 2rem);
+}
+
+.badge {
+    background-color: var(--gray);
+    height: 2.4rem;
+    width: 3.5rem;
+    font-size: var(--fs-medium);
+    padding-top: 1.1rem;
+    border-radius: 50%;
+    color: var(--light);
+    text-align: center;
+    position: absolute;
+    top: 3rem;
+    left: calc(50% - 1.8rem);
+}
+
+.arrow {
+    position: absolute;
+    top: 2rem;
+    height: 5rem;
+    width: auto;
+    padding: 0rem 2rem;
+    line-height: 5rem;
+    font-size: 2.2rem;
+    background-color: var(--accent);
+    color: var(--white);
+    text-align: center;
+    border-radius: 1.2rem;
+}
+
+.arrow.right {
+    left: 55%;
+}
+.arrow.left {
+    right: 55%;
+}
+
+.carrot {
+    top: 1.5rem;
+    transform-origin: center;
+    background-color: var(--accent);
+    transform: rotate(45deg);
+    position: absolute;
+    width: 2rem;
+    border-radius: .3rem;
+    height: 2rem;
+}
+
+.carrot.left {
+    right: -.5rem;
+}
+.carrot.right {
+    left: -.5rem;
+}
+
+/* Small */
+@media (max-aspect-ratio: 1/1) {
+    .line {
+        left:  calc(3.45rem);
+    }
+
+    .data {
+        height: 100%;
+        width: calc(90% - 4rem);
+        float: left;
+        position: relative;
+    }
+
+    .badge {
+        top: 1rem;
+        left: calc(1.9rem);
+    }
+}
+
+.professionLine {
+    width: 100%;
+    position: relative;
+    height: auto;
+    font-weight: 200;
+    color: var(--black);
+    font-size: var(--fs-medium);
+}

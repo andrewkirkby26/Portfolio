@@ -1,0 +1,74 @@
+.card {
+    float: left;
+    position: relative;
+    background-color: var(--light);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin: .5rem;
+    height: auto;
+    /*min-height: 16rem;*/
+}
+
+.description_container {
+    float: left;
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: -.5rem;
+    margin-bottom: .5rem;
+}
+
+p {
+    font-weight: 200;
+    color: var(--black);
+    margin: 0;
+    font-size: var(--fs-medium);
+    line-height: calc(var(--fs-medium) + .4rem);
+    height: auto;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: var(--fs-large);
+    width: calc(100% - 14rem);
+    height: auto;
+    float: left;
+    position: relative;
+    color: var(--accent);
+}
+
+h3 {
+    font-weight: 300;
+    color: var(--gray);
+    width: calc(100%);
+    height: auto;
+    margin-top: -1rem;
+    float: left;
+    position: relative;
+    font-size: var(--fs-medium);
+}
+
+.time {
+    font-weight: 300;
+    color: var(--gray);
+    width: 14rem !important;
+    margin-top: .5rem !important;
+    font-size: var(--fs-medium);
+    float: left;
+    text-align: right;
+    position: relative;
+}
+
+
+.position {
+    margin-top: -1rem;
+}
+
+.slideshowContainer {
+    float: left;
+    position: relative;
+    width: calc(75%);
+    margin-left: 12.5%;
+    margin-bottom: .5rem;
+    height: 10rem;
+}

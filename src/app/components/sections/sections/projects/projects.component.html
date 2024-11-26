@@ -1,0 +1,6 @@
+<div class="container">
+    <div class="section_title" #elem [ngStyle]="getOpacityAnimation(calcPercentVisible(elem))">Projects & Activities</div>
+    <div class="sub_container">
+        <project *ngFor="let project of dataService.resume.orderedActivities" [project]="project" ></project>
+    </div>
+</div>

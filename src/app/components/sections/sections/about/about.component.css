@@ -1,0 +1,21 @@
+.summary {
+    float: left;
+    position: relative;
+    height: auto;
+    width: 79%;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    font-weight: 300;
+    font-size: var(--fs-medium);
+    line-height: var(--fs-large);
+    color: var(--dark-gray);
+    text-align: left;
+}
+
+/* Small */
+@media (max-aspect-ratio: 1/1) {
+    .summary {
+        width: calc(100% - 4rem);
+        margin-left: 2rem;
+    }
+}

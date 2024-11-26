@@ -1,0 +1,96 @@
+.card {
+    position: relative;
+    background-color: var(--light);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin: .5rem;
+    text-align: left;
+}
+
+.description_container {
+    float: left;
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: -.5rem;
+}
+
+p {
+    font-weight: 200;
+    color: var(--black);
+    margin: 0;
+    font-size: var(--fs-medium);
+    line-height: calc(var(--fs-medium) + .4rem);
+    height: auto;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: var(--fs-large);
+    width: calc(100% - 12rem);
+    height: auto;
+    float: left;
+    position: relative;
+    color: var(--accent);
+}
+
+h3 {
+    font-weight: 300;
+    color: var(--gray);
+    width: calc(100%);
+    height: auto;
+    margin-top: -1rem;
+    float: left;
+    position: relative;
+    font-size: var(--fs-medium);
+}
+
+.time {
+    font-weight: 300;
+    color: var(--gray);
+    width: 12rem !important;
+    margin-top: .5rem !important;
+    font-size: var(--fs-medium);
+    float: left;
+    text-align: right;
+    position: relative;
+}
+
+.badge {
+    position: relative;
+    height: 5rem;
+    width: 6rem;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--secondary);
+    margin: 0.5rem;
+    line-height: 4rem;
+}
+
+.badge>mat-icon {
+    background-color: var(--secondary);
+    border-radius: 50%;
+    box-shadow: var(--box-shadow);
+    color: var(--light);
+    width: 3rem;
+    line-height: 3.3rem;
+    margin-top: 1rem;
+    height: 3rem;
+}
+
+/* Large */
+@media (min-aspect-ratio: 1/1) {
+    .card {
+        height: 5rem;
+        width: calc(100% - 14rem) !important;
+    }
+
+}
+
+/* Small */
+@media (max-aspect-ratio: 1/1) {
+    .card {
+        height: auto;
+        width: calc(100% - 7rem) !important;
+    }
+}

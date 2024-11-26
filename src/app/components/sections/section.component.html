@@ -1,0 +1,8 @@
+<div [ngSwitch]='value' class="container">
+    <home class="container" *ngSwitchCase="Constants.HOME"></home>
+    <aboutSection class="container" *ngSwitchCase="Constants.ABOUT"></aboutSection>
+    <experience class="container" *ngSwitchCase="Constants.EXPERIENCES"></experience>
+    <projectSection class="container" *ngSwitchCase="Constants.PROJECTS"></projectSection>
+    <contactSection class="container" *ngSwitchCase="Constants.CONTACT"></contactSection>
+    <certificatesSection class="container" *ngSwitchCase="Constants.CERTIFICATES"></certificatesSection>
+</div>

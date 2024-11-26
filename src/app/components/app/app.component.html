@@ -1,0 +1,23 @@
+<animatedBackground></animatedBackground>
+<div  #entire id='entireApp' class="entireApp">
+    <div class="entireContainer">
+        <about></about>
+        <div #section_wrapper class="sub_container" id="section_wrapper">
+            <section *ngFor='let section of navigationService.navbarItems; let first = first' [value]='section.name' class="section_wrapper"></section>
+            <div class="footer_spacer">
+                <div class="foot_card">
+                    <h3 class="left">©2024 All Rights Reserved.</h3>
+                    <a class="right" href="https://kpidesigning.com/">KPI_LLC</a>
+                </div>
+            </div>
+            <button *ngIf="navigationService.screenSize == Constants.SCREEN_SIZE_LARGE ? section_wrapper.scrollTop > 100 : entire.scrollTop > 100" @slideIn class="up_button" mat-fab color="accent" (click)='navigationService.screenSize == Constants.SCREEN_SIZE_LARGE ? section_wrapper.scroll({top: 0,behavior: "smooth"}) : entire.scroll({top: 0,behavior: "smooth"})    '>
+                <mat-icon>expand_less</mat-icon>
+            </button>
+        </div>
+    </div>
+    <div *ngIf='navigationService.selectedSlideShow' (click)="navigationService.closeSlideShow()" class="slideShowWrapper" >
+        <mat-icon class="closeButton hover" (click)="navigationService.closeSlideShow()">close</mat-icon>
+        <img class="slide" [src]="navigationService.selectedSlideShow.media[navigationService.selectedSlideShow.index]"/>
+        <photoSlideShow *ngIf='navigationService.selectedSlideShow.media && navigationService.selectedSlideShow.media.length > 0' class='slideshowContainer' [visibleAtATime]="3" [media]="navigationService.selectedSlideShow.media"></photoSlideShow>
+    </div>
+</div>

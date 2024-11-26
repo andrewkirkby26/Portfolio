@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="section_title" #elem [ngStyle]="getOpacityAnimation(calcPercentVisible(elem))">Contact</div>
+    <div class="foot_card">
+        <div class="summary">
+            Please feel free to reach out via email or one of my socials below!
+            <mat-divider></mat-divider>
+        </div>
+        <div class="socials">
+            <a class="social hover email" [href]="'mailto:' + dataService.resume.about?.email ">{{dataService.resume.about?.email}}</a>
+            <a *ngFor='let social of dataService.resume.socials' class="social hover" [ngSwitch]="social.type" [href]="social.url" target="_blank">
+                <i *ngSwitchCase="Social.IG" class="fab fa-instagram"></i>
+                <i *ngSwitchCase="Social.FACEBOOK" class="fab fa-facebook"></i>
+                <i *ngSwitchCase="Social.LINKED_IN" class="fab fa-linkedin"></i>
+                <i *ngSwitchCase="Social.TWITTER" class="fab fa-twitter"></i>
+                <i *ngSwitchCase="Social.GITHUB" class="fab fa-github-square"></i>
+            </a>
+        </div>
+    </div>
+</div>

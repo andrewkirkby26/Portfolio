@@ -1,0 +1,4 @@
+<div class="container">
+    <div class="section_title" #elem [ngStyle]="getOpacityAnimation(calcPercentVisible(elem))">About</div>
+    <div class="summary" #elem [ngStyle]="getOpacityAnimation(calcPercentVisible(elem))" [innerHTML]="dataService.resume.about?.summary"></div>
+</div>

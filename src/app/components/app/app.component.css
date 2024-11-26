@@ -1,0 +1,239 @@
+.entireApp {
+    position: fixed;
+    left:0rem;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 2;
+    transition: all .5s;
+}
+
+.foot_card {
+    position: relative;
+    width: calc(100% - 4rem);
+    margin-left: 2rem;
+    z-index: 1;
+    background-color: var(--light);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.foot_card>.left {
+    float: left;
+    width: auto;
+    position: relative;
+    font-size: var(--fs-medium);
+    color: var(--gray);
+    margin-left: .8rem;
+    height: 3rem;
+    margin-top: .7rem;
+}
+
+.foot_card>.right {
+    float: right;
+    width: auto;
+    position: relative;
+    font-size: var(--fs-medium);
+    color: var(--gray);
+    margin-right: .8rem;
+    height: 3rem;
+    margin-top: .7rem;
+}
+
+animatedBackground {
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-color: var(--background);
+}
+
+.entireContainer {
+    position: absolute;
+}
+
+about {
+    position: relative;
+    float: left;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    background-color: var(--light);
+    z-index: 2;
+}
+
+.sub_container {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    /*border-radius: 0rem .4rem .4rem 0rem;*/
+    /*background-color: var(--light);*/
+    z-index: 1;
+}
+
+.section_wrapper {
+    float:left;
+    position: relative;
+    height: auto;
+    width: 100%;
+    margin: 1rem 0rem;
+}
+
+/* Large */
+@media (min-aspect-ratio: 1/1) {
+    .entireContainer {
+        left: 6rem;
+        top: 1rem;
+        width: calc(100% - 12rem);
+        height: calc(100% - 2rem);
+    }
+
+    about {
+        height:100%;
+        width: var(--about-width);
+    }
+
+    .sub_container {
+        height:  100vh;
+        position: absolute;
+        right: 1rem;
+        top: -1rem;
+        overflow-y: auto;
+        overflow-x: hidden;
+        width: calc(100% - var(--about-width) - 2rem);
+    }
+
+    .footer_spacer {
+        float: left;
+        position: relative;
+        width: 100%;
+        height: 4rem;
+    }
+
+    .foot_card {
+        height: 3rem;
+    }
+
+    .up_button>mat-icon {
+        font-size: 2.4rem !important;
+        top: -0.55rem;
+        left: -0.575rem;
+        position: relative;
+    }
+}
+
+/* Small */
+@media (max-aspect-ratio: 1/1) {
+    .entireContainer {
+        left: .5rem;
+        top: .5rem;
+        width: calc(100% - 1rem);
+        height: calc(100% - 1rem);
+    }
+
+    .up_button>mat-icon {
+        font-size: 2.8rem !important;
+        top: -0.55rem;
+        left: -0.575rem;
+        position: relative;
+    }
+
+    about {
+        width: 100%;
+        height: auto;
+    }
+
+    .sub_container {
+        height: auto;
+        width: 100%;
+    }
+
+    .foot_card>.left {
+        width: 100%;
+        margin-left: 0rem;
+        text-align: center;
+    }
+
+    .foot_card>.right {
+        width: 100%;
+        float: left;
+        margin-right: 0rem;
+        margin-top: -2rem;
+        text-align: center;
+    }
+
+    .foot_card {
+        height: 6rem;
+        margin-left: -.5rem;
+        width: calc(100% - 1rem);
+    }
+
+    .footer_spacer {
+        float: left;
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin-left: 1rem;
+    }
+}
+
+.up_button {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 2rem;
+    z-index: 7;
+    color: white;
+}
+
+.slideShowWrapper {
+    position: fixed;
+    top: 0px;
+    z-index: 40;
+    text-align: center;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(100,100,100,.7);
+}
+
+.slide {
+    display: inline-block;
+    top:4rem;
+    position: relative;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    height: calc(100% - 20rem);
+    width: auto;
+}
+
+/* Small */
+@media (max-aspect-ratio: 1/1) {
+    .slide {
+        top: 8rem;
+        width: auto;
+        max-width: calc(100% - 5rem);
+        height: auto !important;
+        max-height: calc(100% - 25rem);
+    }
+}
+
+.slideshowContainer {
+    position: absolute;
+    width: calc(75%);
+    left: 12.5%;
+    bottom: 1rem;
+    height: 10rem;
+}
+
+.closeButton {
+    color: var(--white);
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    font-size: 2rem;
+}
+

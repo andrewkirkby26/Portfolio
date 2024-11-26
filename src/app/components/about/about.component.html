@@ -1,0 +1,70 @@
+<div class="container">
+    <div class="image_container">
+        <div class="background"></div>
+        <div class="image_wrapper">
+            <img class='about_image hover' [src]="'../../../../../resources/images/' + dataService.resume.about?.about_photo" (click)="navigationService.selectSlideShow([('../../../../../resources/images/' + dataService.resume.about?.about_photo)], 0)"/>
+            <div class="green_indicator">
+                <span class="material-icons">done</span>
+            </div>
+            <h1>{{dataService.resume.about?.name}}</h1>
+            <h2>{{dataService.resume.about?.career}}</h2>
+        </div>
+
+    </div>
+    <div class="sub_container">
+        <div class="info_spacer"></div>
+        <mat-divider></mat-divider>
+        <div class="info_container" *ngFor="let info of infos" [ngSwitch]="info.name">
+            <div class="info_label">{{info.name}}:</div>
+            <a *ngSwitchCase="'Email'"  class="info_value" [href]="'mailto:' + info.value">{{info.value}}</a>
+            <a *ngSwitchCase="'Phone'"  class="info_value" [href]="'tel:' + info.value">{{info.value}}</a>
+            <div *ngSwitchDefault class="info_value">{{info.value}}</div>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="traits_circle_container">
+            <div class="traitCircle" *ngFor="let trait of dataService.resume.traitsCircle">
+                <mat-progress-spinner color="accent" mode="determinate" [value]="trait.confidence"></mat-progress-spinner>
+                <span>{{trait.confidence}}%</span>
+                <b>{{trait.name}}</b>
+            </div>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="traits_bar_container">
+            <div class="traitsBar" *ngFor="let trait of dataService.resume.traitsBar">
+                <mat-progress-bar color="accent" mode="determinate" [value]="trait.confidence"></mat-progress-bar>
+                <span>{{trait.confidence}}%</span>
+                <b>{{trait.name}}</b>
+            </div>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="skills_container">
+            <div class="skill" *ngFor="let skillGroup of dataService.resume.skills">
+                <b>{{skillGroup.name}}:</b>
+                <div class="skill_sub">
+                    <span *ngFor="let skill of skillGroup.skills; let last = last">{{!last ? (skill + ',') : skill}}</span>
+                </div>
+            </div>
+        </div>
+        <mat-divider></mat-divider>
+
+        <div class="info_spacer" style="height: 5rem"></div>
+    </div>
+    <div class="footer">
+        <div class="background"></div>
+        <div class="theme_container">
+            <mat-slide-toggle labelPosition="before" #mode [checked]="colorSchemeService.darkMode" (click)="colorSchemeService.setDarkMode(mode.checked)">
+<!--                <mat-icon style="margin-top: .8rem" class="mat-dark-gray">{{!colorSchemeService.darkMode ? 'light_mode' : 'dark_mode'}}</mat-icon>-->
+                <mat-icon style="margin-top: .8rem" class="mat-dark-gray">dark_mode</mat-icon>
+            </mat-slide-toggle>
+        </div>
+        <div class="social_container">
+            <a *ngFor='let social of dataService.resume.socials' class="social hover" [ngSwitch]="social.type" [href]="social.url" target="_blank">
+                <i *ngSwitchCase="Social.IG" class="fab fa-instagram"></i>
+                <i *ngSwitchCase="Social.FACEBOOK" class="fab fa-facebook"></i>
+                <i *ngSwitchCase="Social.LINKED_IN" class="fab fa-linkedin"></i>
+                <i *ngSwitchCase="Social.TWITTER" class="fab fa-twitter"></i>
+                <i *ngSwitchCase="Social.GITHUB" class="fab fa-github-square"></i>
+            </a>
+        </div>
+    </div>
+</div>

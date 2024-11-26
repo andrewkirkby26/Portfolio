@@ -1,0 +1,19 @@
+.container {
+    float:left;
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+
+.section_title {
+    position: relative;
+    float: left;
+    height: var(--fs-large);
+    line-height: var(--fs-large);
+    font-size: var(--fs-large);
+    width: calc(100% - 2rem);
+    font-weight: 500;
+    color: var(--accent);
+    padding-left: 2rem;
+    /*margin-bottom: 1rem;*/
+}
